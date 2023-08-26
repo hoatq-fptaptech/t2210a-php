@@ -31,7 +31,7 @@
     <?php include("nav.php"); ?>
     <section>
         <div class="container">
-            <a href="#" class="btn btn-outline-primary">Create a new product</a>
+            <a href="create.php" class="btn btn-outline-primary">Create a new product</a>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -51,7 +51,10 @@
                         <td><?php echo $item["price"] ?></td>
                         <td><?php echo $item["description"] ?></td>
                         <td><?php echo $item["qty"] ?></td>
-                        <td></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $item["id"] ?>" class="btn btn-warning">Edit</a>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </td>
                     </tr>
                 <?php endforeach;?>
                 </tbody>
