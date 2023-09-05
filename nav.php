@@ -1,6 +1,7 @@
 <?php
     session_start();
     $user = isset($_SESSION["auth"])?$_SESSION["auth"]:null;
+    $cart = isset($_SESSION["cart"])?$_SESSION["cart"]:[];
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
@@ -45,6 +46,9 @@
                         <a class="nav-link" href="register.php">Register</a>
                     </li>
                 <?php endif;?>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cart<span class="badge text-bg-secondary"><?php echo count($cart) ?></span></a>
+                </li>
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

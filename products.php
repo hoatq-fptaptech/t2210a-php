@@ -41,6 +41,7 @@
                         <th>Description</th>
                         <th>Qty</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,7 @@
                         <td><?php echo $item["price"] ?></td>
                         <td><?php echo $item["description"] ?></td>
                         <td><?php echo $item["qty"] ?></td>
+                        <td><a href="addtocart.php?id=<?php echo $item["id"];?>" class="btn btn-outline-primary">Add to cart</a> </td>
                         <td>
                             <a href="edit.php?id=<?php echo $item["id"] ?>" class="btn btn-warning">Edit</a>
                             <a onclick="return confirm('Chắc chắn muốn xoá sản phẩm: <?php echo $item["name"] ?>')" href="delete.php?id=<?php echo $item["id"] ?>" class="btn btn-danger">Delete</a>
